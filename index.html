@@ -49,8 +49,9 @@
     <body style="background-color:#FFFFFF;margin-left:50px;">
      <hr>
      <h3 id="Abstract">Abstract</h3>
+      
      <p class="ex1">
-       <pre>
+       <pre id="Introduction_InText">
 As urbanization accelerates, cities worldwide face significant challenges related to pollution and sustainability. Singapore, recognized as a leading smart city, has implemented a range of innovative strategies to manage these pressing issues.
 With a population of 6.04 million residing within 750 square kilometres, Singapore has prioritized the use of technology and data-driven solutions to enhance urban living while mitigating environmental impacts. This article explores Singapore's
 comprehensive approach to reducing air pollution, including the strategic relocation of polluting industries, stringent emission standards, and substantial investments in research for sustainable technologies. By examining these initiatives,
@@ -128,7 +129,7 @@ systems, enabling real-time data collection that informs policy and public healt
       <hr>
       <h3 id="Analysis and discussion">Analysis and discussion</h3>
       <p class="ex1">
-        <pre>
+        <p id="Analysis_InText">
 Air pollution significantly contributes to global warming and adversely affects both environmental and public health. In recent years, there has been a heightened focus on addressing this pressing issue, particularly within urban
 communities. Information technology and communication tools have emerged as vital assets in controlling environmental emissions and reducing noise pollution. Singapore exemplifies proactive measures in this realm, successfully
 implementing a range of strategies that have led to a notable decline in annual air pollution levels. Here are some of the steps taken by Singapore to reduce air pollution in the city:
@@ -183,6 +184,10 @@ implementing a range of strategies that have led to a notable decline in annual 
 
       </pre>
 
+<video src="presentation.mp4" width="800" height="450" controls>
+</video>  
+      
+
    <h3 id="references">references</h3> 
       <p class="ex1">
       <pre>
@@ -196,4 +201,74 @@ implementing a range of strategies that have led to a notable decline in annual 
       </pre>
 
 
+<div id="last-upload">loading last update time...</div>div>
+  <!--verify Button -->
+  <button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding:8px 16px;">
+    Verify Last Modified Time
+  </button>
+
+  <script>
+    async function getLastUpdatedTime() {
+      const username = 'aa07919';
+      const repo = 'FY07919';
+      CONST URL = 'https://api.github.com/repos/${Ajer-Pajer}/${FY07919}/commits';
+      try {
+        const response = await fetch(url, {
+          method: 'GET',
+          headers: {
+            'Accept':'application/vnd.github.v3+json',
+          }
+        });
+        if (!response.ok) {
+          throw new Error('Error fetching data: ${response.status} - ${response.statusText}');
+        }
+        const comits = await response.json();
+        if (comits && comits.length>0){
+          const lastComnitDate = new Date(comits[0].comit.comitter.date);
+
+          //Display the time on load
+          document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
+        }
+      }
+      // Function to verify the last updated time be re-fetching it from the API
+      async function verifyLastUpdatedTime() {
+        document.getElementById('last-updated').innerText = 'Verifying...';
+        await getLastUpdatedTime();
+        alert("Last modified time has been succesfully verified from GitHub API.");
+      }
+      // Initial load to display the time on page load
+      window.onload = getLastUpdatedTime;
+  </script>
+
+
+  <!-- Placeholder for total word count -->
+  <p id="totalWordCount"></p>
+
+  <hr>
+
+  <script>
+function displayWordCount(sectionId, outputId) {
+  const text = document.getElementById(sectionId).textContent;
+  const wordArray = text.trim().split(/\s+/);
+  const wordCount = wordArray.length;
+  return wordCount;
+  function displayTotalWordCount() {
+    const IntroductionCount = displayWordCount("Introduction_InText");
+    const AnalysisCount = displayWordCount("Analysis_InText");
+    const totalWordCount = IntroductionCount + AnalysisCount;
+    document.getElementById("totalWordCount").innerText = 'Total word count: ${totalEordCount}';
+  }
+  Window.onload = displayTotalWordCount;
+
+
+
+    
+  </script>
+
+
+
+
+
+
+  
   
