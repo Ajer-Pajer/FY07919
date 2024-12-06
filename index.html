@@ -137,7 +137,7 @@ implementing a range of strategies that have led to a notable decline in annual 
 <hr>
 
 <h4 id="The challenges faced by Singapore">The challenges faced by Singapore</h4>
-           <p id="Analysis_InText">
+           <p id="Challenges_InText">
   Singapore’s journey wasn’t without challenges, particularly with it’s geographic and resource limitations as well as the buy in from the public.
 
   Singapore is a small island nation with no natural resources, so the nation had faced constraints in land, water and energy. These limitations had caused development of innovative solutions. Such as NEWater
@@ -151,7 +151,7 @@ implementing a range of strategies that have led to a notable decline in annual 
   <hr>        
 
 <h4 id="planning">planning</h4>        
-         <p id="Analysis_InText">
+         <p id="Planning_Intext">
   One of Singapore's key strategies in managing air pollution has been the strategic relocation of polluting industries outside the urban core. By designating industrial zones on the outskirts of the city,
   Singapore effectively minimizes the impact of emissions on residential areas and public spaces. This planning initiative not only reduces air pollution in densely populated regions but also facilitates better management
   of industrial waste and emissions. Additionally, the establishment of green buffers and advanced emission controls in these industrial zones further mitigates environmental impacts, showcasing Singapore's commitment to
@@ -159,7 +159,7 @@ implementing a range of strategies that have led to a notable decline in annual 
 
  <hr>
         <h4 id="emission standards">emission stamdards</h4>
-           <p id="Analysis_InText">
+           <p id="Emission_InText">
   Singapore enforces stringent emission standards to combat air pollution and protect public health. The government has established comprehensive regulations that set limits on pollutants from various
   sources, including vehicles, industrial facilities, and construction sites. The Land Transport Authority (LTA) oversees vehicle emissions standards, ensuring that all vehicles comply with strict Euro emission standards. 
   For industries, the National Environment Agency (NEA) conducts regular inspections and requires the implementation of Best Available Technology (BAT) to minimize emissions. Violators face significant penalties, including 
@@ -168,7 +168,7 @@ implementing a range of strategies that have led to a notable decline in annual 
 
 <hr>
         <h4 id="research">research</h4>
-         <p id="Analysis_InText">
+         <p id="Research_InText">
   The government allocates significant funding to various initiatives aimed at exploring sustainable solutions across sectors such as transportation, energy, and waste management. Research institutions and
   universities collaborate with industry players to develop cutting-edge technologies, such as electric and hybrid vehicles, carbon capture systems, and advanced waste-to-energy processes. Additionally, the Singapore
   Economic Development Board (EDB) plays a crucial role in attracting global talent and partnerships to enhance local capabilities. By prioritizing research into cleaner technologies, Singapore not only addresses its
@@ -176,7 +176,7 @@ implementing a range of strategies that have led to a notable decline in annual 
 
         <hr>
 <h4 id="incentives">incentives</h4>
-         <p id="Analysis_InText">
+         <p id="Incentives_InText">
   Singapore offers a variety of incentives to encourage compliance with its strict emission standards, fostering a culture of environmental responsibility among businesses and residents. These incentives 
   include tax rebates, grants, and subsidies for companies that invest in cleaner technologies and sustainable practices. For instance, businesses adopting electric vehicles or implementing energy-efficient processes 
   can benefit from significant financial support, reducing their overall operational costs. Additionally, the government promotes public awareness campaigns that highlight the benefits of adhering to emission standards, 
@@ -195,7 +195,7 @@ implementing a range of strategies that have led to a notable decline in annual 
 <a  href="https://www.nea.gov.sg"> National Environment Agency (NEA). (2023). Air Quality Report 2022. [24/10/24]
 <a  href="https://www.edb.gov.sg">  Singapore Economic Development Board (EDB). Sustainable Solutions for Urban Living. [24/10/24]
 <a href="https://www.lta.gov.sg"> Land Transport Authority . Vehicle Emissions Standards [24/10/24]
-<a href="https://tablebuilder.singstat.gov.sg/table/TS/M890641"> Department of statistics Singapore. Air pollution levels 2007-2023 [24/10/24]
+<a href="https://tablebuilder.singstat.gov.sg/table/TS/M890641"> Department of statistics Singapore. Air pollution levels 2007-2023 [24/10/24]>
 
         
       </pre>
@@ -273,7 +273,11 @@ implementing a range of strategies that have led to a notable decline in annual 
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
     const IntroductionCount = displayWordCount("Introduction_InText");
-    const AnalysisCount = displayWordCount("Analysis_InText");
+    const AnalysisCount = displayWordCount("Challenges_InText");
+    const AnalysisCount = displayWordCount("Planning_Intext");
+    const AnalysisCount = displayWordCount("Emission_InText");
+    const AnalysisCount = displayWordCount("Incentives_InText");
+    const AnalysisCount = displayWordCount("Research_InText");
     // Calculate the sum of all selected sections
     const totalWordCount = IntroductionCount + AnalysisCount;
     // Display the total word count
