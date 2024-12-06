@@ -51,8 +51,8 @@
      <h3 id="Abstract">Abstract</h3>
       
      <p class="ex1">
-       <p id="Abstract_InText"> 
-      <pre>
+       <pre id="Introduction_InText"> 
+      
         
 As urbanization accelerates, cities worldwide face significant challenges related to pollution and sustainability. Singapore, recognized as a leading smart city, has implemented a range of innovative strategies to manage these pressing issues.
 With a population of 6.04 million residing within 750 square kilometres, Singapore has prioritized the use of technology and data-driven solutions to enhance urban living while mitigating environmental impacts. This article explores Singapore's
@@ -275,7 +275,7 @@ implementing a range of strategies that have led to a notable decline in annual 
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const AbstractCount = displayWordCount("Abstract_InText");
+    
     const IntroductionCount = displayWordCount("Introduction_InText");
     const AnalysisCount = displayWordCount("Challenges_InText");
     const PlanningCount = displayWordCount("Planning_Intext");
@@ -283,7 +283,7 @@ implementing a range of strategies that have led to a notable decline in annual 
     const IncentivesCount = displayWordCount("Incentives_InText");
     const ResearchCount = displayWordCount("Research_InText");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount + PlanningCount + EmissionsCount + IncentivesCount + ResearchCount + AbstractCount;
+    const totalWordCount = IntroductionCount + AnalysisCount + PlanningCount + EmissionsCount + IncentivesCount + ResearchCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
