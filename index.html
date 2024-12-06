@@ -192,11 +192,11 @@ implementing a range of strategies that have led to a notable decline in annual 
    <h3 id="references">references</h3> 
       <p class="ex1">
       <pre>
-<a  href="https://www.nea.gov.sg"> National Environment Agency (NEA). (2023). Air Quality Report 2022. [24/10/24]
-<a  href="https://www.edb.gov.sg">  Singapore Economic Development Board (EDB). Sustainable Solutions for Urban Living. [24/10/24]
-<a href="https://www.lta.gov.sg"> Land Transport Authority . Vehicle Emissions Standards [24/10/24]
-<a href="https://tablebuilder.singstat.gov.sg/table/TS/M890641"> Department of statistics Singapore. Air pollution levels 2007-2023 [24/10/24]>
-
+<a  href="https://www.nea.gov.sg"> National Environment Agency (NEA). (2023). Air Quality Report 2022. [24/10/24] </a>
+<a  href="https://www.edb.gov.sg">  Singapore Economic Development Board (EDB). Sustainable Solutions for Urban Living. [24/10/24] </a>
+<a href="https://www.lta.gov.sg"> Land Transport Authority . Vehicle Emissions Standards [24/10/24] </a>
+<a href="https://tablebuilder.singstat.gov.sg/table/TS/M890641"> Department of statistics Singapore. Air pollution levels 2007-2023 [24/10/24] </a>
+<a href="https://www.pub.gov.sg/Public/WaterLoop/OurWaterStory/NEWater)"> Singapore's National Water Agency [01/12/2024]  </a>
         
       </pre>
 
@@ -274,12 +274,12 @@ implementing a range of strategies that have led to a notable decline in annual 
     // Calculate word count for each section and accumulate the total
     const IntroductionCount = displayWordCount("Introduction_InText");
     const AnalysisCount = displayWordCount("Challenges_InText");
-    const AnalysisCount = displayWordCount("Planning_Intext");
-    const AnalysisCount = displayWordCount("Emission_InText");
-    const AnalysisCount = displayWordCount("Incentives_InText");
-    const AnalysisCount = displayWordCount("Research_InText");
+    const PlanningCount = displayWordCount("Planning_Intext");
+    const EmissionsCount = displayWordCount("Emission_InText");
+    const IncentivesCount = displayWordCount("Incentives_InText");
+    const ResearchCount = displayWordCount("Research_InText");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
+    const totalWordCount = IntroductionCount + AnalysisCount + PlanningCount + EmissionsCount + IncentivesCount + ResearchCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
